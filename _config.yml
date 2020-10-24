@@ -131,7 +131,7 @@ comment:
   # https://github.com/gitalk/gitalk
   gitalk:
     clientID: 'faf464da633b08ff5317'
-    clientSecret: '652051e01ab21c5d7df8705db4f8e23bbcef5c05'
+    clientSecret: '402324fc860894e5fcba6320fddbddd1ec7f5644'
     repo: gitalk-comments
     owner: This-is-an-Apple
     admin: 
