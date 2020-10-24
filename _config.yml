@@ -130,8 +130,8 @@ comment:
   # Gitalk settings
   # https://github.com/gitalk/gitalk
   gitalk:
-    clientID: 'd6247712dc288a5a60ca'
-    clientSecret: 'ed1ec72417828343c79ed910a1b77d140fa715a7'
+    clientID: 'faf464da633b08ff5317'
+    clientSecret: '652051e01ab21c5d7df8705db4f8e23bbcef5c05'
     repo: gitalk-comments
     owner: This-is-an-Apple
     admin: 
