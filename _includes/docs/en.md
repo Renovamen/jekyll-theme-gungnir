@@ -16,7 +16,7 @@ Clone the project from Github:
 
 ```bash
 git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
-cd renovamen.github.io
+cd jekyll-theme-gungnir
 ```
 
 To run the theme locally, Ruby and Jekyll should be installed firstly, refer to [here](https://jekyllrb.com/docs/installation/){:target="_blank"} for details. Then you could install the dependencies:

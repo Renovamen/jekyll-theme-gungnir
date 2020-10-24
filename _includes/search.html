@@ -12,7 +12,6 @@
             type="text" 
             class="search-field" 
             placeholder="Just search ..." 
-            onkeypress="checkCode()"
             style="background-color: transparent"
         >
     </div>
@@ -30,23 +29,6 @@
         limit: 20,
         fuzzy: false
     })
-
-    // search-results 高度适配
-    $('.search-results').css({
-        'height': $(window).height() - 200 + "px"
-    });
-
-    function checkCode() {
-        if (event.keyCode == 13) {
-            getCode = $('#search-input').val();
-            if(getCode == "cd dark universe") {
-                window.location.href = "https://renovamen.gitee.io/dark-universe/";
-            }
-            else if(getCode == "cd resume") {
-                window.location.href = "https://renovamen.ink/Endless-Resume/";
-            }
-        }
-    }
 
     function autoFocus() {
         setTimeout(function () {

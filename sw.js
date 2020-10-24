@@ -29,7 +29,7 @@ const PRECACHE_LIST = [
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
-  "renovamen.ink",
+  "jekyll-theme-gungnir.vercel.app",
   "cdn.jsdelivr.net"
 ]
 const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']

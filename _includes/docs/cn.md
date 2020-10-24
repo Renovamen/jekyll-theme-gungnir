@@ -16,7 +16,7 @@ Github: [<i class="fas fa-link"></i> Renovamen/jekyll-theme-gungnir](https://git
 
 ```bash
 git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
-cd renovamen.github.io
+cd jekyll-theme-gungnir
 ```
 
 本地运行主题需要参考[这里](https://jekyllrb.com/docs/installation/){:target="_blank"}安装 Ruby 和 Jekyll。然后安装依赖包：

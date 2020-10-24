@@ -51,7 +51,7 @@ Gungnir 是一个 Jekyll 主题。~~瞎改~~修改自 [Huxpro/huxpro.github.io](
 
 ```bash
 git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
-cd renovamen.github.io
+cd jekyll-theme-gungnir
 
 # 安装依赖
 bundle config set path 'vendor/bundle'
