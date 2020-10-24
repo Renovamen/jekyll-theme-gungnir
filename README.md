@@ -12,13 +12,13 @@ Gungnir is a blog theme for Jekyll. It is derived from [Huxpro/huxpro.github.io]
 
 ## Demo
 
-Check out the live demo [here](https://renovamen.ink/) (my blog).
+Check out the live demo [here](https://jekyll-theme-gungnir.vercel.app/).
 
 &nbsp;
 
 ## Documentation
 
-Check out the documentation [here](https://renovamen.ink/theme/). It supports Chinese and English now.
+Check out the documentation [here](https://jekyll-theme-gungnir.vercel.app/theme/). It supports Chinese and English now.
 
 &nbsp;
 
