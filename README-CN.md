@@ -1,6 +1,6 @@
 # Gungnir
 
-我的博客，也是一个 Jekyll 主题。~~瞎改~~修改自 [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)，感谢它。
+Gungnir 是一个 Jekyll 主题。~~瞎改~~修改自 [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)，感谢它。
 
 **Gungnir**，冈格尼尔，是北欧神话中主神奥丁使用的矛（强行科普）。
 
@@ -12,13 +12,13 @@
 
 ## 演示实例
 
-[这里](https://renovamen.ink/)是一个演示实例（也就是我的博客）。
+[这里](https://jekyll-theme-gungnir.vercel.app/)是一个演示实例。
 
 &nbsp;
 
 ## 文档
 
-[这里](https://renovamen.ink/theme/)是本主题的文档，有中文和英文版本。
+[这里](https://jekyll-theme-gungnir.vercel.app/theme/)是本主题的文档，有中文和英文版本。
 
 &nbsp;
 
@@ -50,7 +50,7 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/Renovamen/vuepress-theme-gungnir.git
+git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
 cd renovamen.github.io
 
 # 安装依赖

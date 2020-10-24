@@ -1,6 +1,6 @@
 # 这大概是一篇文档
 
-Github: [<i class="fas fa-link"></i> Renovamen/vuepress-theme-gungnir](https://github.com/Renovamen/vuepress-theme-gungnir){:target="_blank"}
+Github: [<i class="fas fa-link"></i> Renovamen/jekyll-theme-gungnir](https://github.com/Renovamen/jekyll-theme-gungnir){:target="_blank"}
 
 在 [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io){:target="_blank"} 的基础上瞎改的的主题，同时~~照搬~~借鉴了很多其他主题的代码和设计，包括但不限于 [mashirozx/Sakura](https://github.com/mashirozx/Sakura/){:target="_blank"}、[kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme){:target="_blank"}、[Fechin/hexo-theme-diaspora](https://github.com/Fechin/hexo-theme-diaspora){:target="_blank"}、[liuzc/LeaveIt](https://github.com/liuzc/LeaveIt){:target="_blank"} 等（这么看来似乎也没多少东西是我自己写的了，逃）。
 
@@ -15,7 +15,7 @@ Github: [<i class="fas fa-link"></i> Renovamen/vuepress-theme-gungnir](https://g
 从 GitHub 克隆项目：
 
 ```bash
-git clone https://github.com/Renovamen/vuepress-theme-gungnir.git
+git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
 cd renovamen.github.io
 ```
 
@@ -102,7 +102,7 @@ while True:
 highlight: # "dark" (default), "light"
 ```
 
-代码高亮的样式文件在 [`_sass/highlight`](https://github.com/Renovamen/vuepress-theme-gungnir/tree/master/_sass/highlight){:target="_blank"} 目录下，可以自行调整样式，或者直接引用 highlight.js 自带的[一堆主题](https://github.com/highlightjs/highlight.js/tree/master/src/styles){:target="_blank"}。
+代码高亮的样式文件在 [`_sass/highlight`](https://github.com/Renovamen/jekyll-theme-gungnir/tree/master/_sass/highlight){:target="_blank"} 目录下，可以自行调整样式，或者直接引用 highlight.js 自带的[一堆主题](https://github.com/highlightjs/highlight.js/tree/master/src/styles){:target="_blank"}。
 
 
 #### 提示
@@ -313,12 +313,12 @@ header-img:
 
 ### About
 
-参考一下本站 [About 页面](/about){:target="_blank"} 和它的 [Front-matter](https://github.com/Renovamen/vuepress-theme-gungnir/blob/master/about.html){:target="_blank"} 大概就知道怎么改了？
+参考一下本站 [About 页面](/about){:target="_blank"} 和它的 [Front-matter](https://github.com/Renovamen/jekyll-theme-gungnir/blob/master/about.html){:target="_blank"} 大概就知道怎么改了？
 
 
 ### Links
 
-参考一下本站 [Links 页面](/links){:target="_blank"} 和它的 [Front-matter](https://github.com/Renovamen/vuepress-theme-gungnir/blob/master/links.html){:target="_blank"} 大概就知道怎么改了？（复读 *1）
+参考一下本站 [Links 页面](/links){:target="_blank"} 和它的 [Front-matter](https://github.com/Renovamen/jekyll-theme-gungnir/blob/master/links.html){:target="_blank"} 大概就知道怎么改了？（复读 *1）
 
 如果没有指定某个链接的头像，那么会显示默认头像（`img/links/default.jpg`）。
 

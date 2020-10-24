@@ -1,7 +1,7 @@
 
 # Ducumentation
 
-Github: [<i class="fas fa-link"></i> Renovamen/vuepress-theme-gungnir](https://github.com/Renovamen/vuepress-theme-gungnir){:target="_blank"}
+Github: [<i class="fas fa-link"></i> Renovamen/jekyll-theme-gungnir](https://github.com/Renovamen/jekyll-theme-gungnir){:target="_blank"}
 
 Derived from [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io){:target="_blank"}. Some of the designs and code are borrowed from other themes, including but not limited to [mashirozx/Sakura](https://github.com/mashirozx/Sakura/){:target="_blank"}, [kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme){:target="_blank"}, [Fechin/hexo-theme-diaspora](https://github.com/Fechin/hexo-theme-diaspora){:target="_blank"}, [liuzc/LeaveIt](https://github.com/liuzc/LeaveIt){:target="_blank"}, et al.
 
@@ -15,7 +15,7 @@ Derived from [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.i
 Clone the project from Github:
 
 ```bash
-git clone https://github.com/Renovamen/vuepress-theme-gungnir.git
+git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
 cd renovamen.github.io
 ```
 
@@ -101,7 +101,7 @@ The default highlighting theme is `dark`, you can also switch it to `light`:
 highlight: # "dark" (default), "light"
 ```
 
-Highlighting stylesheets could be found [here](https://github.com/Renovamen/vuepress-theme-gungnir/tree/master/_sass/highlight){:target="_blank"}. You can also modify them to create your own theme, or just import the [stylesheets](https://github.com/highlightjs/highlight.js/tree/master/src/styles){:target="_blank"} provided by Highlight.js.
+Highlighting stylesheets could be found [here](https://github.com/Renovamen/jekyll-theme-gungnir/tree/master/_sass/highlight){:target="_blank"}. You can also modify them to create your own theme, or just import the [stylesheets](https://github.com/highlightjs/highlight.js/tree/master/src/styles){:target="_blank"} provided by Highlight.js.
 
 
 #### Alert
@@ -322,12 +322,12 @@ The *mask* is the translucent overlay placed on the cover image. It will be help
 
 ### About
 
-Just refer to the [About page](/about){:target="_blank"} and its [Front-matter](https://github.com/Renovamen/vuepress-theme-gungnir/blob/master/about.html){:target="_blank"} of this site.
+Just refer to the [About page](/about){:target="_blank"} and its [Front-matter](https://github.com/Renovamen/jekyll-theme-gungnir/blob/master/about.html){:target="_blank"} of this site.
 
 
 ### Links
 
-Just refer to the [Links page](/links){:target="_blank"} and its [Front-matter](https://github.com/Renovamen/vuepress-theme-gungnir/blob/master/links.html){:target="_blank"} of this site. (Repeat *1)
+Just refer to the [Links page](/links){:target="_blank"} and its [Front-matter](https://github.com/Renovamen/jekyll-theme-gungnir/blob/master/links.html){:target="_blank"} of this site. (Repeat *1)
 
 If any of the links' avatar is not specified, `img/links/default.jpg` will be shown as the default avatar.
 

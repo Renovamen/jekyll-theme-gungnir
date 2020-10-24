@@ -9,7 +9,7 @@ avatar: "img/header-avatar.jpeg"                    # the avatar showing on the 
 
 
 # GitHub repository (if the site is hosted by GitHub)
-repository: Renovamen/vuepress-theme-gungnir
+repository: Renovamen/jekyll-theme-gungnir
 repository_branch: master
 
 

@@ -1,6 +1,6 @@
 # Gungnir
 
-My blog. Also a theme for Jekyll. It is derived from [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io), thanks for this theme.
+Gungnir is a blog theme for Jekyll. It is derived from [Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io), thanks for this theme.
 
 **Gungnir** is the spear of the god Odin in Norse mythology.
 
@@ -12,7 +12,7 @@ My blog. Also a theme for Jekyll. It is derived from [Huxpro/huxpro.github.io](h
 
 ## Demo
 
-Check out the demo [here](https://renovamen.ink/) (my blog).
+Check out the live demo [here](https://renovamen.ink/) (my blog).
 
 &nbsp;
 
@@ -50,7 +50,7 @@ Inherit from the original theme:
 ## Quick start
 
 ```bash
-git clone https://github.com/Renovamen/vuepress-theme-gungnir.git
+git clone https://github.com/Renovamen/jekyll-theme-gungnir.git
 cd renovamen.github.io
 
 # install denpendencies
