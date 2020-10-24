@@ -1,0 +1,133 @@
+/*  ------------------- Basic Info -------------------  */
+.about-page .about-header {
+    height: 100vh;
+    margin-bottom: -150px;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin-top: -340px;
+    }
+
+    @media (max-width: $MQIpad){
+        margin-bottom: 0;
+        height: auto;
+        &__content {
+            position: relative;
+            width: auto;
+            margin-top: 0;
+        }
+    }
+
+    &-basic {
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 100%;
+            box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
+            img {
+                cursor: auto;
+                padding: 5px;
+                border-radius: 100%;
+                max-width: 100%;
+                @include transition(all ease 1s);
+                box-shadow: inset 0 0 10px rgba(179, 179, 179, 0.6);
+                &:hover {
+                    @include transform(rotate(360deg));
+                }
+            }
+        }
+        .also-called {
+            font-weight: 700;
+            color: var(--body-gray);
+            text-align: center;
+            margin-top: -25px;
+        }
+        .social-info {
+            margin-top: -20px;
+            text-align: center;
+            .social-link {
+                display: inline-block;
+                width: 12%;
+                text-align: center;
+                margin: 55px 0;
+                > a {
+                    text-decoration: none;
+                    color: var(--primary-color);
+                    i {
+                        @include transition(all ease .1s);
+                    }
+                    &:hover i {
+                        @include transform(scale(1.3));
+                    }
+                }
+                @media (max-width: $MQMobile){
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    &-info {
+        .about-title {
+            margin-top: -30px;
+            @media (max-width: $MQMobile){
+                margin-top: 30px;
+            }
+        }
+        .biography {
+            font-size: 19px;
+            text-align: left;
+            max-width: 720px;
+            margin: 20px 10px 75px;
+            font-weight: 400;
+            a {
+                color: var(--primary-color);
+                &:hover,
+                &:focus {
+                  color: var(--primary-color-dark);
+                }
+            }
+            @media (max-width: $MQMobile){
+                font-size: 18px;
+            }
+        }
+        .personal-information {
+            margin: -50px 15px auto;
+            width: 100%;
+            @media (max-width: $MQMobile){
+                width: 95%;
+            }
+            .title {
+                margin: 15px 0 -10px 0;
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 1.14px;
+            }
+            ul {
+                padding-left: 15px;
+            }
+            .interests li{
+                margin-bottom: -20px;
+                .interest-title {
+                    font-size: 16px;
+                }
+            }
+            .education {
+                .edu-degree {
+                    font-size: 18px;
+                }
+                .edu-school {
+                    font-size: 15px;
+                    margin-top: -30px;
+                    color: var(--body-gray);
+                }
+                @media (max-width: $MQMobile){
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

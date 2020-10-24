@@ -1,0 +1,30 @@
+---
+layout: default
+title: 404
+hide-in-nav: true
+header-style: text
+permalink: /404.html
+---
+
+<style type="text/css">
+	html, body{
+        height: 100%;
+    }
+</style>
+
+<div class="notfound">
+	<div class="error-info">
+		<h1 class="error-emoji"></h1>
+		<p>/* Oops! Where are we? */</p>
+		<p><a href="{{ site.baseurl }}/">$ cd /home/</a></p>
+	</div>
+ </div>
+
+<script>
+	var emojiArray = [
+		'\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(^_^)b', '(╯‵□′)╯',
+		'(=\'X\'=)', '(>_<)', '\\(°ˊДˋ°)/', 'ㄟ(▔▽▔)ㄏ'
+	];
+	var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+	$('.error-emoji').append(document.createTextNode(errorEmoji));
+</script>

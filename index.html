@@ -1,0 +1,103 @@
+---
+layout: page
+homepage: true
+description: A blog theme for Jekyll.
+header-img:
+    -   url: img/home-bg/1.jpg
+        mask: rgba(40, 57, 101, .4)
+    -   url: img/home-bg/2.jpg
+        mask: rgba(31, 64, 87, .2)
+    -   url: img/home-bg/3.jpg
+        mask: rgba(68, 74, 83, .1)
+    -   url: img/home-bg/4.jpg
+        mask: rgba(19, 75, 50, .2)
+---
+
+{%- include utils/get-assets-baseurl.html -%}
+{%- assign _assets_baseurl = __return -%}
+
+{% for post in paginator.posts %}
+{% if post.hide-in-home %}
+<!----------- 不显示 ----------->
+{% else %}
+    <!--  
+        Renoamen: support displaying images on homepage
+        Borrowed a lot from: https://github.com/Fechin/hexo-theme-diaspora
+    -->
+    {% if site.theme_style.post_preview != 'text' %}
+    <div class="post-preview-img">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <img src="{{ _assets_baseurl }}/{{ post.header-img }}" class="cover">
+        </a>
+        <div class="else">
+            <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+                {% if post.subtitle %}
+                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                {% endif %}
+            </a>
+            <p class="post-content-preview">
+                {% if post.lang == 'en' %}
+                    {{ post.content | strip_html | truncate:200 }}
+                {% else %}
+                    {{ post.content | strip_html | truncate:100 }}
+                {% endif %}    
+            </p>
+        </div>
+    </div>
+    {% else %}
+    <div class="post-preview">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="post-title">
+                {{ post.title }}
+            </h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">
+                {{ post.subtitle }}
+            </h3>
+            {% endif %}
+            <div class="post-content-preview">
+                {% if post.lang == 'en' %}
+                    {{ post.content | strip_html | truncate:300 }}
+                {% else %}
+                    {{ post.content | strip_html | truncate:200 }}
+                {% endif %}
+            </div>
+        </a>
+        <p class="post-meta">
+            Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+    </div>
+    <hr>
+    {% endif %}
+{% endif %}
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+
+
+{% if site.theme_style.post_preview != 'text' %}
+<script>
+    // 文章上浮效果
+    window.sr = ScrollReveal();
+    sr.reveal('.post-preview-img', {
+        duration: 700,
+        distance: '100px'
+    });
+</script>
+{% endif %}

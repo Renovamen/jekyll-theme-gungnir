@@ -1,0 +1,166 @@
+# Site settings
+title: Gungnir
+SEOTitle: Jekyll theme Gungnir
+description: Jekyll version of the blog theme Gungnir.
+keyword: "jekyll, theme, blog, blog theme"
+url: "https://jekyll-theme-gungnir.vercel.app"      # your host, for absolute URL
+baseurl: ""                                         # for example, '/blog' if your blog hosted on 'host/blog'
+avatar: "img/header-avatar.jpeg"                    # the avatar showing on the homepage
+
+
+# GitHub repository (if the site is hosted by GitHub)
+repository: Renovamen/vuepress-theme-gungnir
+repository_branch: master
+
+
+# Theme style settings
+theme_style: 
+  highlight:    # "dark" (default), "light"
+  alert:        # "flat" (default), "modern"
+  post_preview: # "image" (default), "text"
+                # display post's featured image on homepage or not
+
+
+# Markdown enhancements settings
+math: 
+  enable: true    # false (default), true 
+                  # math rendering for all posts and keynotes
+  engine:         # "katex" (default), "mathjax"
+                  # only make sense when `math.engine: true`
+chart: true       # false (default), true
+mermaid: true     # false (default), true
+emoji-plus: true  # false (default), true
+
+
+# CDN settings
+cdn:
+  source:       # "jsdelivr" (default), "bootcdn", "unpkg", "cdnjs"
+  enable: true  # false (default), true
+                # optimizing asset files via jsDelivr or not
+
+
+# Publish posts or collection documents with a future date.
+future: true
+
+collections:
+  experiences:
+    output: true
+  publications:
+    output: true
+  projects:
+    output: true
+
+
+# SNS settings
+sns:
+  RSS: true
+  github_username: Renovamen
+  weibo_username:     
+  zhihu_username: chao-neng-gui-su
+  twitter_username: renovamen_zxh
+  facebook_username: renovamen.zou
+  linkedin_username: xiaohan-zou-55bba0160
+  email_address: renovamenzxh@gmail.com
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+# highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude:
+  - package.json
+  - package-lock.json
+  - README.md
+  - README-CN.md
+  - LICENSE
+  - Gruntfile.js
+  - Gemfile
+  - Gemfile.lock
+  - /node_modules
+anchorjs: true  # if you want to customize anchor. check out `anchor.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+# timezone: CN  
+
+
+# Gems
+# you have to `bundle config set path 'vendor/bundle' && bundle install` before local preview
+plugins:
+  - jekyll-paginate
+  - jemoji
+
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM                       # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    disable: true                  # we use highlight.js for syntax highlighting, so we disable rouge here
+
+
+# Navigation menu settings
+menus:
+  - title: Home
+    font: fab fa-fort-awesome
+    url: /
+  - title: About
+    font: fas fa-paw
+    submenus:
+      - title: Me
+        font: fas fa-user-astronaut
+        url: /about/
+      - title: Theme
+        font: fas fa-meteor
+        url: /theme/
+  - title: Archive
+    font: fas fa-archive
+    url: /archive/
+  - title: Links
+    font: fas fa-link
+    url: /links/
+
+
+# Comment settings
+comment: 
+  provider: gitalk # false (default), "disqus", "gitalk", "valine"
+
+  # Disqus settings
+  disqus_username: renovamen
+
+  # Gitalk settings
+  # https://github.com/gitalk/gitalk
+  gitalk:
+    clientID: 'd6247712dc288a5a60ca'
+    clientSecret: 'ed1ec72417828343c79ed910a1b77d140fa715a7'
+    repo: gitalk-comments
+    owner: This-is-an-Apple
+    admin: 
+      - Renovamen
+      - This-is-an-Apple
+
+  # Valine settings
+  # https://valine.js.org/
+  valine:
+    appID:
+    appKey:
+
+
+# Analytics settings
+analytics:
+  # Baidu Analytics 
+  ba_track_id: 75381d210789d3eaf855fa16246860cc # [your track id]
+
+  # Google Analytics
+  google:
+    ga_track_id: 'UA-146858305-1'            # Format: UA-xxxxxx-xx
+    ga_domain: renovamen.ink
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+# Whether or not to enable Hitokoto (the bubble on homepage)
+hitokoto: true # default: false

@@ -1,0 +1,107 @@
+// customizition for highlight.js
+.highlight-wrap {
+  position: relative;
+  background: $highlight-background;
+  border: none;
+  border-radius: 5px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  @media (max-width: $MQSmall){
+    border-radius: 4px;
+  }
+  &[data-rel]:before {
+    color: #fff;
+    content: attr(data-rel);
+    @include gungnir-font();
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    background: $highlight-lang-span;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    border-radius: 0 0 3px 3px;
+    @media (max-width: $MQSmall){
+      font-size: 8px;
+      height: 20px;
+      line-height: 20px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+  code {
+    @include code-font();
+    font-size: 16px;
+    font-weight: 500;
+    word-break: break-word;
+    padding: 2px;
+    border-radius: 5px;
+    @media (max-width: $MQSmall){
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  }
+}
+
+td.hljs-ln-numbers {
+  text-align: center;
+  color: $highlight-ln-number;
+  background: $highlight-background;
+  position: absolute;
+  left: 0;
+  width: 30px
+}
+
+.hljs-ln {
+  margin: 10px 0 10px 0 !important;
+  width: 100% !important;
+}
+
+.hljs-ln-code .hljs-ln-line {
+  margin-left: 25px;
+  padding-left: 5px;
+  &:hover {
+    background-color: $highlight-ln-highlight
+  }
+}
+
+.code-block-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  z-index: 9999999;
+  margin: 0;
+  border-radius: 0;
+  code {
+    --widthA: 100%;
+    --widthB: calc(var(--widthA) - 30px);
+    height: var(--widthB);
+    min-height: 99%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: auto
+  }
+}
+
+.code-block-fullscreen-html-scroll {
+  overflow: hidden
+}
+
+// inline code
+:not(pre) > code {
+  color: var(--inline-code-text);
+  background-color: var(--inline-code-bg);
+}

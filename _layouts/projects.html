@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+{% include intro-header.html type='page' short=true %}
+
+{%- include utils/get-assets-baseurl.html -%}
+{%- assign _assets_baseurl = __return -%}
+
+<div class="portfolio container">
+    {% for proj in site.projects %}
+    <article class="item">
+        {% if proj.img %}
+        <a class="item-thumbnail" style="background-image: url({{ _assets_baseurl }}/{{ proj.img }})"></a>
+        {% else %}
+        {% endif %}
+        <div class="item-content">
+            <h2 class="item-title">
+                <a href="{{ proj.url }}">{{proj.title}}</a>
+            </h2>
+            <p>
+                {% if proj.lang == 'en' %}
+                    {{ post.content | strip_html | truncate:250 }}
+                {% else %}
+                    {{ proj.content | strip_html | truncate:150 }}
+                {% endif %}
+            </p>
+        </div>
+    </article>
+    {% endfor %}
+</div>
