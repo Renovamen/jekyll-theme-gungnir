@@ -248,9 +248,7 @@ analytics:
 
 ```yaml
 analytics:
-  google:
-    ga_track_id: 'UA-146858305-1' # 谷歌统计跟踪 ID，格式：UA-xxxxxx-xx
-    ga_domain: renovamen.ink # 要跟踪的网站域名
+  ga_track_id: 'G-ZYM02DSEHS' # 谷歌统计跟踪 ID
 ```
 
 ### CDN 源

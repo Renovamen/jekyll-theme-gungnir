@@ -258,9 +258,7 @@ Paste the code offered by [Google Analytics](https://tongji.baidu.com/web/welcom
 
 ```yaml
 analytics:
-  google:
-    ga_track_id: 'UA-146858305-1' # your tracking code, format: UA-xxxxxx-xx
-    ga_domain: renovamen.ink # URL of your site
+  ga_track_id: 'G-ZYM02DSEHS' # your tracking code
 ```
 
 
