@@ -8,17 +8,20 @@ Gungnir is a blog theme for Jekyll. It is derived from [Huxpro/huxpro.github.io]
 
 ![preview](img/docs/gungnir.jpg)
 
+
 &nbsp;
 
 ## Demo
 
 Check out the live demo [here](https://jekyll-theme-gungnir.vercel.app/).
 
+
 &nbsp;
 
 ## Documentation
 
 Check out the documentation [here](https://jekyll-theme-gungnir.vercel.app/theme/). It supports Chinese and English now.
+
 
 &nbsp;
 
@@ -45,6 +48,7 @@ Inherit from the original theme:
 - Multilingual article
 - Analytics ([Google Analytics](https://analytics.google.com/) and [Baidu Tongji](https://tongji.baidu.com/))
 
+
 &nbsp;
 
 ## Quick start
@@ -60,6 +64,7 @@ bundle install
 # local preview
 bundle exec jekyll serve
 ```
+
 
 &nbsp;
 

@@ -35,7 +35,7 @@ emoji-plus: true  # false (default), true
 # CDN settings
 cdn:
   source:       # "jsdelivr" (default), "bootcdn", "unpkg", "cdnjs"
-  enable: true  # false (default), true
+  enable:       # false (default), true
                 # optimizing asset files via jsDelivr or not
 
 

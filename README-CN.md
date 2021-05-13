@@ -8,17 +8,20 @@ Gungnir 是一个 Jekyll 主题。~~瞎改~~修改自 [Huxpro/huxpro.github.io](
 
 ![preview](img/docs/gungnir.jpg)
 
+
 &nbsp;
 
 ## 演示实例
 
 [这里](https://jekyll-theme-gungnir.vercel.app/)是一个演示实例。
 
+
 &nbsp;
 
 ## 文档
 
 [这里](https://jekyll-theme-gungnir.vercel.app/theme/)是本主题的文档，有中文和英文版本。
+
 
 &nbsp;
 
@@ -45,6 +48,7 @@ Gungnir 是一个 Jekyll 主题。~~瞎改~~修改自 [Huxpro/huxpro.github.io](
 - 文章多语言
 - 站点统计（[Google Analytics](https://analytics.google.com/) 和 [百度统计](https://tongji.baidu.com/)）
 
+
 &nbsp;
 
 ## 快速开始
@@ -60,6 +64,7 @@ bundle install
 # 本地预览
 bundle exec jekyll serve
 ```
+
 
 &nbsp;
 

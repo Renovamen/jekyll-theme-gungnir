@@ -3,9 +3,9 @@ __return -%}
 
 <script>
   $(".emoji-plus").each(function () {
-    var $this = $(this);
-    var imgURL = "/img/emoji/bilitv/" + $this.text() + ".gif";
-    var $img = $(
+    let $this = $(this);
+    const imgURL = "/img/emoji/bilitv/" + $this.text() + ".gif";
+    const $img = $(
       '<img class="emoji-plus" src="{{ _assets_baseurl }}' +
         imgURL +
         '" height="30" width="30">'

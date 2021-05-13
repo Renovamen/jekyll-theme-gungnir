@@ -26,7 +26,7 @@
 
 {%- assign _admin_list = "" -%}
 {%- for _admin in site.comment.gitalk.admin -%}
-    {%- assign _admin_list = _admin_list | append: ", "" | append: _admin | append: """ -%}
+{%- assign _admin_list = _admin_list | append: ", '" | append: _admin | append: "'" -%}
 {%- endfor -%}
 {%- assign _last = _admin_list | size | minus: 1 -%}
 {%- assign _admin_list = _admin_list | slice: 2, _last -%}
