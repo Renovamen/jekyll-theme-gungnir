@@ -1,61 +1,61 @@
 {% comment %}
-    @param {string} type - 'page' | 'post' | 'keynote'
-    @param {boolean} short
+  @param {string} type - 'page' | 'post' | 'keynote'
+  @param {boolean} short
 {% endcomment %}
 
 {%- include utils/get-assets-baseurl.html -%}
 {%- assign _assets_baseurl = __return -%}
 
 {% if include.type == 'post' or include.type == 'page' %}
-    {% if page.homepage != true %}
-    <style type="text/css">
-        header.intro-header{
-            position: relative;
-            background-image: url('{{ _assets_baseurl }}/{{ page.header-img }}');
-            background: {{ page.header-bg-css }};
-        }
+{% if page.homepage != true %}
+<style type="text/css">
+  header.intro-header{
+    position: relative;
+    background-image: url('{{ _assets_baseurl }}/{{ page.header-img }}');
+    background: {{ page.header-bg-css }};
+  }
 
-        {% if page.header-mask %}
-        header.intro-header .header-mask{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background: {{ page.header-mask }};
-        }
-        {% endif %}
-    </style>
-    
-    {% else %}
-    <style type="text/css">
-        header.intro-header{
-            position: relative;
-            height: 100vh;
-            background-image: url('{{ _assets_baseurl }}/{{ page.header-img[0].url }}');
-            background: {{ page.header-bg-css }};
-        }
+  {% if page.header-mask %}
+  header.intro-header .header-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: {{ page.header-mask }};
+  }
+  {% endif %}
+</style>
 
-        @media only screen and (max-width: 1023px){
-            header.intro-header{
-                height: auto;
-            }
-        }
+{% else %}
+<style type="text/css">
+  header.intro-header{
+    position: relative;
+    height: 100vh;
+    background-image: url('{{ _assets_baseurl }}/{{ page.header-img[0].url }}');
+    background: {{ page.header-bg-css }};
+  }
 
-        @media only screen and (min-width: 1024px) {
-            header.intro-header{
-                background-attachment: fixed;
-            }
-        }
+  @media only screen and (max-width: 1023px){
+    header.intro-header{
+      height: auto;
+    }
+  }
 
-        {% if page.header-img[0].mask %}
-        header.intro-header .header-mask{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background: {{ page.header-img[0].mask }};
-        }
-        {% endif %}
-    </style>
-    {% endif %}
+  @media only screen and (min-width: 1024px) {
+    header.intro-header{
+      background-attachment: fixed;
+    }
+  }
+
+  {% if page.header-img[0].mask %}
+  header.intro-header .header-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: {{ page.header-img[0].mask }};
+  }
+  {% endif %}
+</style>
+{% endif %}
 {% endif %}
 
 
@@ -65,176 +65,178 @@
 {% else %}
 <header class="intro-header" >
 {% endif %}
-    <div class="header-mask"></div>
-    {% if page.header-img-credit %}
-    <div class="header-img-credit">
-        Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
-    </div>
-    {% endif %}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %} always create a h2 for keeping the margin {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% if page.hide-author != true %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
-                    {% endif %}
-                </div>
-            </div>
+  <div class="header-mask"></div>
+  {% if page.header-img-credit %}
+  <div class="header-img-credit">
+      Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
+  </div>
+  {% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            {% for tag in page.tags %}
+            <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          <h1>{{ page.title }}</h1>
+          {% comment %} always create a h2 for keeping the margin {% endcomment %}
+          <h2 class="subheading">{{ page.subtitle }}</h2>
+          {% if page.hide-author != true %}
+          <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+          {% endif %}
         </div>
+      </div>
     </div>
+  </div>
 </header>
 {% endif %}
 
 
 {% if include.type == 'keynote' %}
 <style type="text/css">
-    header.intro-header{
-        height: 500px;
-        overflow: hidden;
-    }
-    header.intro-header .container{
-        visibility: hidden; 
-    }
-    header iframe{
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
+  header.intro-header{
+    height: 500px;
+    overflow: hidden;
+  }
+  header.intro-header .container{
+    visibility: hidden;
+  }
+  header iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 </style>
+
 <header class="intro-header" >
-    <iframe src="{{page.iframe}}"></iframe>
-    <!-- keep for SEO -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %} always create a h2 for keeping the margin {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
-                        on {{ page.date | date: "%B %-d, %Y" }}</span>
-                </div>
-            </div>
+  <iframe src="{{page.iframe}}"></iframe>
+  <!-- keep for SEO -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            {% for tag in page.tags %}
+            <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          <h1>{{ page.title }}</h1>
+          {% comment %} always create a h2 for keeping the margin {% endcomment %}
+          <h2 class="subheading">{{ page.subtitle }}</h2>
+          <span class="meta">
+            Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
+            on {{ page.date | date: "%B %-d, %Y" }}
+          </span>
         </div>
+      </div>
     </div>
+  </div>
 </header>
 {% endif %}
 
 
 {% if include.type == 'page' %}
 <header class="intro-header" id="intro-header">
-    <div class="header-mask" id="header-mask"></div>
+  <div class="header-mask" id="header-mask"></div>
 
-    {% if page.homepage == true %}
-    <a class="img-prev" onclick="changeImage(-1)">
-        <i class="fas fa-chevron-left"></i>
+  {% if page.homepage == true %}
+  <a class="img-prev" onclick="changeImage(-1)">
+    <i class="fas fa-chevron-left"></i>
+  </a>
+  <a class="img-next" onclick="changeImage(1)">
+    <i class="fas fa-chevron-right"></i>
+  </a>
+
+  <div class="headertop-down faa-float animated">
+    <a onclick="smoothTo('#container')">
+      <i class="fas fa-chevron-down" ></i>
     </a>
-    <a class="img-next" onclick="changeImage(1)">
-        <i class="fas fa-chevron-right"></i>
+  </div>
+
+  <div class="header-avatar">
+    <a href="{{site.baseurl}}" >
+      <img src="{{ _assets_baseurl }}/{{ site.avatar }}">
     </a>
+  </div>
 
-    <div class="headertop-down faa-float animated"> 
-        <a onclick="smoothTo('#container')">
-            <i class="fas fa-chevron-down" ></i>
-        </a>
+  {% if site.hitokoto %}
+  <div class="header-bubble">
+    <div class="bubble">
+      <p class="bubble-words" id="hitokoto">正在加载一言...</p>
     </div>
+    <div class="bubble-tile"></div>
+  </div>
+  {% endif %}
 
-    <div class="header-avatar">
-        <a href="{{site.baseurl}}" >
-            <img src="{{ _assets_baseurl }}/{{ site.avatar }}">
-        </a>
+  <!-- Only shows on desktop -->
+  <div class="header-info">
+    <div class="header-info-back">
+      <div class="site-heading home-site-heading">
+        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+        <span class="subheading">{{ page.description }}</span>
+      </div>
     </div>
+    <!-- SNS Link -->
+    {% include sns-links.html center=true %}
+  </div>
+  {% endif %}
 
-    {% if site.hitokoto %}
-    <div class="header-bubble">
-        <div class="bubble">
-            <p class="bubble-words" id="hitokoto">正在加载一言...</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {% if page.homepage == true %}
+        <!-- Only shows on mobile -->
+        <div class="site-heading phone-site-heading">
+          <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+          <span class="subheading">{{ page.description }}</span>
         </div>
-        <div class="bubble-tile"></div>
-    </div>
-    {% endif %}
-
-    <!-- Only shows on desktop -->
-    <div class="header-info">
-        <div class="header-info-back">
-            <div class="site-heading home-site-heading">
-                <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                <span class="subheading">{{ page.description }}</span>
-            </div>
+        {% else %}
+        {% if include.short %}
+        <div class="site-heading" id="tag-heading">
+        {% else %}
+        <div class="site-heading">
+        {% endif %}
+          <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+          <span class="subheading">{{ page.description }}</span>
         </div>
-        <!-- SNS Link -->
-        {% include sns-links.html center=true %}
+        {% endif %}
+      </div>
     </div>
-    {% endif %}
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% if page.homepage == true %}
-                <!-- Only shows on mobile -->
-                <div class="site-heading phone-site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <span class="subheading">{{ page.description }}</span>
-                </div>  
-                {% else %}
-                {% if include.short %}
-                <div class="site-heading" id="tag-heading">
-                {% else %}
-                <div class="site-heading">
-                {% endif %}
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <span class="subheading">{{ page.description }}</span>
-                </div>
-                {% endif %}
-
-            </div>
-        </div>
-    </div>
+  </div>
 </header>
 {% endif %}
 
 
 {% if page.homepage %}
 <script>
-    // header image switcher
-    function changeImage(n) {
-        headerImgList = '[{{page.header-img}}]'.replace(/=>/g,":").replace(/}{/g,"},{");
-        headerImgList = $.parseJSON(headerImgList);
-        len = headerImgList.length
+  // header image switcher
+  function changeImage(n) {
+    headerImgList = '[{{page.header-img}}]'.replace(/=>/g,":").replace(/}{/g,"},{");
+    headerImgList = $.parseJSON(headerImgList);
+    len = headerImgList.length
 
-        introHeader = document.getElementById("intro-header");
-        curImgURL = getComputedStyle(introHeader, null).backgroundImage;
+    introHeader = document.getElementById("intro-header");
+    curImgURL = getComputedStyle(introHeader, null).backgroundImage;
 
-        for(i=0; i<len; i++) {
-            if(curImgURL.indexOf(headerImgList[i].url) != -1) {
-                newImg = headerImgList[(i + n + len) % len]
-                $(".intro-header").css("background-image", 'url("{{ _assets_baseurl }}/' + newImg.url + '")');
-                
-                if(newImg.mask) $(".header-mask").css("background", newImg.mask);
-                else $(".header-mask").css("background", "rgb(0, 0, 0, 0)");
-            }
-        }
+    for(let i = 0; i < len; i++) {
+      if(curImgURL.indexOf(headerImgList[i].url) != -1) {
+        newImg = headerImgList[(i + n + len) % len]
+        $(".intro-header").css("background-image", 'url("{{ _assets_baseurl }}/' + newImg.url + '")');
+
+        if(newImg.mask) $(".header-mask").css("background", newImg.mask);
+        else $(".header-mask").css("background", "rgb(0, 0, 0, 0)");
+      }
     }
+  }
 
-    // fade out while scrolling
-    $(window).scroll(function(){ 
-        $(".img-prev, .img-next, .headertop-down, .header-avatar, .header-bubble, .header-info").css({
-            "opacity": 1 - $(this).scrollTop() * 1.2 / $(this).height(),
-        })
+  // fade out while scrolling
+  $(window).scroll(function(){
+    $(".img-prev, .img-next, .headertop-down, .header-avatar, .header-bubble, .header-info").css({
+      "opacity": 1 - $(this).scrollTop() * 1.2 / $(this).height(),
     })
+  })
 </script>
 
 {% if site.hitokoto %}

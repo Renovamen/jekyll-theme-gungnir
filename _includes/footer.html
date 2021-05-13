@@ -1,18 +1,18 @@
 <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <!-- SNS Link -->
-                <!-- {% include sns-links.html center=true %} -->
-                <p class="copyright">
-                    &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2020
-                    <br>
-                    Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/Renovamen/jekyll-theme-gungnir" target="_blank">Gungnir</a>
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <!-- SNS Link -->
+        <!-- {% include sns-links.html center=true %} -->
+        <p class="copyright">
+          &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2020
+          <br>
+          Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/Renovamen/jekyll-theme-gungnir" target="_blank">Gungnir</a>
+        </p>
+      </div>
     </div>
+  </div>
 </footer>
 
 <!-- add dark / light mode switcher -->
@@ -37,11 +37,11 @@
 {% if page.title == 'Archive' %}
 <!-- jquery.tagcloud.js -->
 <script>
-    $.fn.tagcloud.defaults = {
-        //size: {start: 1, end: 1, unit: 'em'},
-        color: {start: '#a5a5e4', end: '#4388c4'},
-    };
-    $('#tag_cloud a').tagcloud();
+  $.fn.tagcloud.defaults = {
+    //size: {start: 1, end: 1, unit: 'em'},
+    color: {start: '#a5a5e4', end: '#4388c4'},
+  };
+  $('#tag_cloud a').tagcloud();
 </script>
 <script src="{{ "/js/gungnir/archive.js" | prepend: _assets_baseurl }}"></script>
 {% endif %}
@@ -49,24 +49,24 @@
 
 <!--fastClick.js -->
 <script>
-    var $nav = document.querySelector("nav");
-    if($nav) FastClick.attach($nav);
+  var $nav = document.querySelector("nav");
+  if($nav) FastClick.attach($nav);
 </script>
 
 
 <!-- Google Analytics -->
 {% if site.analytics.ga_track_id %}
-    {% include analytics/google.html %}
+  {% include analytics/google.html %}
 {% endif %}
 
 
 <!-- Baidu Tongji -->
 {% if site.analytics.ba_track_id %}
-    {% include analytics/baidu.html %}
+  {% include analytics/baidu.html %}
 {% endif %}
 
 
 <!-- Multi-Lingual -->
 {% if page.multilingual %}
-    {% include multilingual/script.html %}
+  {% include multilingual/script.html %}
 {% endif %}

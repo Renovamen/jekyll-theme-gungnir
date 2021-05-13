@@ -1,55 +1,50 @@
 <!-- Side Catalog Container -->
-<div class="
-    col-lg-2 col-lg-offset-0
-    sidebar-container
-    catalog-container">
-    <div class="side-catalog">
-        <hr class="hidden-sm hidden-xs">
-        <h5>
-            <a class="catalog-toggle" href="#">CATALOG</a>
-        </h5>
-        <ul class="catalog-body"></ul>
-    </div>
+<div class="col-lg-2 col-lg-offset-0 sidebar-container catalog-container">
+  <div class="side-catalog">
+    <hr class="hidden-sm hidden-xs" />
+    <h5>
+      <a class="catalog-toggle" href="#">CATALOG</a>
+    </h5>
+    <ul class="catalog-body"></ul>
+  </div>
 </div>
 
 {%- include utils/get-cdn.html -%}
 {%- assign _cdn = __return -%}
 
-<link href="{{ _cdn.tocbot.css }}" rel="stylesheet" type="text/css">
+<link href="{{ _cdn.tocbot.css }}" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript">
-    function generateCatalog(selector) {
-
-        // links page
-        if('{{ page.layout }}' == 'links') {
-            _containerSelector = 'div.link-list'
-        }
-        // interop with multilangual 
-        else {
-            if ('{{ page.multilingual }}' == 'true') {
-                _containerSelector = 'div.post-container.active'
-            } 
-            else {
-                _containerSelector = 'div.post-container'
-            }
-        }
-        
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: selector,
-            // Where to grab the headings to build the table of contents.
-            contentSelector: _containerSelector,
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: 'h2, h3, h4, h5, h6',
-        });
-        return true;
+  function generateCatalog(selector) {
+    // links page
+    if ("{{ page.layout }}" == "links") {
+      _containerSelector = "div.link-list";
+    }
+    // interop with multilangual
+    else {
+      if ("{{ page.multilingual }}" == "true") {
+        _containerSelector = "div.post-container.active";
+      } else {
+        _containerSelector = "div.post-container";
+      }
     }
 
-    generateCatalog(".catalog-body");
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: selector,
+      // Where to grab the headings to build the table of contents.
+      contentSelector: _containerSelector,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: "h2, h3, h4, h5, h6",
+    });
+    return true;
+  }
 
-    // toggle side catalog
-    $(".catalog-toggle").click((function(e){
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
+  generateCatalog(".catalog-body");
+
+  // toggle side catalog
+  $(".catalog-toggle").click(function (e) {
+    e.preventDefault();
+    $(".side-catalog").toggleClass("fold");
+  });
 </script>

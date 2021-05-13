@@ -14,7 +14,7 @@ repository_branch: main
 
 
 # Theme style settings
-theme_style: 
+theme_style:
   highlight:    # "dark" (default), "light"
   alert:        # "flat" (default), "modern"
   post_preview: # "image" (default), "text"
@@ -22,8 +22,8 @@ theme_style:
 
 
 # Markdown enhancements settings
-math: 
-  enable: true    # false (default), true 
+math:
+  enable: true    # false (default), true
                   # math rendering for all posts and keynotes
   engine:         # "katex" (default), "mathjax"
                   # only make sense when `math.engine: true`
@@ -55,7 +55,7 @@ collections:
 sns:
   RSS: true
   github_username: Renovamen
-  weibo_username:     
+  weibo_username:
   zhihu_username: chao-neng-gui-su
   twitter_username: renovamen_zxh
   facebook_username: renovamen.zou
@@ -80,7 +80,7 @@ exclude:
   - /node_modules
 anchorjs: true  # if you want to customize anchor. check out `anchor.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
-# timezone: CN  
+# timezone: CN
 
 
 # Gems
@@ -121,7 +121,7 @@ menus:
 
 
 # Comment settings
-comment: 
+comment:
   provider: gitalk # false (default), "disqus", "gitalk", "valine"
 
   # Disqus settings
@@ -134,7 +134,7 @@ comment:
     clientSecret: '402324fc860894e5fcba6320fddbddd1ec7f5644'
     repo: gitalk-comments
     owner: This-is-an-Apple
-    admin: 
+    admin:
       - Renovamen
       - This-is-an-Apple
 
@@ -147,7 +147,7 @@ comment:
 
 # Analytics settings
 analytics:
-  # Baidu Analytics 
+  # Baidu Analytics
   ba_track_id: 00504d7a0bf51278aa92b36e60e830b5 # [your baidu track id]
 
   # Google Analytics

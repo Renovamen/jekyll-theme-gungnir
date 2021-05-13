@@ -1,5 +1,5 @@
 {%- if site.cdn.enable -%}
-    {%- assign __return = 'https://cdn.jsdelivr.net/gh/' | append: site.repository | append: '@' | append: site.repository_branch -%}
+  {%- assign __return = 'https://cdn.jsdelivr.net/gh/' | append: site.repository | append: '@' | append: site.repository_branch -%}
 {%- else -%}
-    {%- assign __return = site.baseurl -%}
+  {%- assign __return = site.baseurl -%}
 {%- endif -%}

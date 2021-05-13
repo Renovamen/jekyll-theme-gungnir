@@ -1,34 +1,34 @@
-$highlight-background   : #282c34;
-$highlight-foreground   : #fff;
-$highlight-comment      : #7d8391;
-$highlight-red          : #e67b70;
-$highlight-orange       : #fec28c;
-$highlight-yellow       : #fee89c;
-$highlight-green        : #a2ce83;
-$highlight-aqua         : #56b6c2;
-$highlight-blue         : #87befd;
-$highlight-purple       : #dd85f8;
-$highlight-ln-number    : #818896;
-$highlight-ln-highlight : rgba(255, 255, 255, .1);
-$highlight-lang-span    : #2989d8;
+$highlight-background: #282c34;
+$highlight-foreground: #fff;
+$highlight-comment: #7d8391;
+$highlight-red: #e67b70;
+$highlight-orange: #fec28c;
+$highlight-yellow: #fee89c;
+$highlight-green: #a2ce83;
+$highlight-aqua: #56b6c2;
+$highlight-blue: #87befd;
+$highlight-purple: #dd85f8;
+$highlight-ln-number: #818896;
+$highlight-ln-highlight: rgba(255, 255, 255, 0.1);
+$highlight-lang-span: #2989d8;
 
 .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: $highlight-foreground;
-    background: $highlight-background;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: $highlight-foreground;
+  background: $highlight-background;
 }
 
 .hljs-comment,
 .hljs-quote {
-    color: $highlight-comment;
+  color: $highlight-comment;
 }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-    color: $highlight-purple;
+  color: $highlight-purple;
 }
 
 .hljs-section,
@@ -36,11 +36,11 @@ $highlight-lang-span    : #2989d8;
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-    color: $highlight-red;
+  color: $highlight-red;
 }
 
 .hljs-literal {
-    color: $highlight-aqua;
+  color: $highlight-aqua;
 }
 
 .hljs-string,
@@ -48,12 +48,12 @@ $highlight-lang-span    : #2989d8;
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-    color: $highlight-green;
+  color: $highlight-green;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-    color: $highlight-yellow;
+  color: $highlight-yellow;
 }
 
 .hljs-attr,
@@ -64,7 +64,7 @@ $highlight-lang-span    : #2989d8;
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-    color: $highlight-orange;
+  color: $highlight-orange;
 }
 
 .hljs-symbol,
@@ -73,17 +73,17 @@ $highlight-lang-span    : #2989d8;
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-    color: $highlight-blue;
+  color: $highlight-blue;
 }
 
 .hljs-emphasis {
-    font-style: italic;
+  font-style: italic;
 }
 
 .hljs-strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .hljs-link {
-    text-decoration: underline;
+  text-decoration: underline;
 }

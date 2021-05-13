@@ -1,36 +1,38 @@
 // Sidebar Components
 
-@media (min-width: ($MQLarge + 1px)){
-    .sidebar-container {
-        padding-right: 5%;
-    }
+@media (min-width: ($MQLarge + 1px)) {
+  .sidebar-container {
+    padding-right: 5%;
+  }
 }
 
 // Container of Sidebar
-.sidebar-container{
-    color: $gray-l;
-    font-size: 14px;
-    h5 {
-        color: $gray;
-        padding-bottom: 1em;
-        a {
-            color: $gray !important;
-            text-decoration: none;
-        }
-    }
+.sidebar-container {
+  color: $gray-l;
+  font-size: 14px;
+  h5 {
+    color: $gray;
+    padding-bottom: 1em;
     a {
-        color: $gray-l !important;
-        &:hover, &:active {
-            color: var(--primary-color) !important;
-        }
+      color: $gray !important;
+      text-decoration: none;
     }
-    .tag s{
-        a {
-            border-color: $gray-l;
-            &:hover, &:active {
-                border-color: var(--primary-color);
-            }
-        }
+  }
+  a {
+    color: $gray-l !important;
+    &:hover,
+    &:active {
+      color: var(--primary-color) !important;
     }
-    @include hide-scrollbar();
+  }
+  .tag s {
+    a {
+      border-color: $gray-l;
+      &:hover,
+      &:active {
+        border-color: var(--primary-color);
+      }
+    }
+  }
+  @include hide-scrollbar();
 }

@@ -9,8 +9,8 @@ permalink: /offline.html
 
 <style type="text/css">
 	html, body{
-        height: 100%;
-    }
+    height: 100%;
+  }
 </style>
 
 <div class="notfound">
@@ -21,10 +21,10 @@ permalink: /offline.html
 </div>
 
 <script>
-	var emojiArray = [
+	const emojiArray = [
 		'\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(^_^)b', '(╯‵□′)╯',
 		'(=\'X\'=)', '(>_<)', '\\(°ˊДˋ°)/', 'ㄟ(▔▽▔)ㄏ'
 	];
-	var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+	const errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
 	$('.error-emoji').append(document.createTextNode(errorEmoji));
 </script>

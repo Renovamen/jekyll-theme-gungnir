@@ -110,19 +110,19 @@ select {
 }
 
 // override table style in bootstrap
-table.table > tbody, table.table > thead {
+table.table > tbody,
+table.table > thead {
   th,
   td {
     border: 1px solid var(--border-color) !important;
   }
 }
 
-@media (max-width: $MQMobile){
+@media (max-width: $MQMobile) {
   .table-responsive {
     border: 0;
   }
 }
-
 
 hr.small {
   max-width: 100px;
@@ -191,16 +191,24 @@ samp {
     }
   }
   // downscale the font a little bit in mobile
-  @media (max-width: $MQMobile){
-    h1 { font-size: 30px; }
-    h2 { font-size: 24px; }
-    h3 { font-size: 21px; }
-    h4 { font-size: 19px; }
+  @media (max-width: $MQMobile) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 21px;
+    }
+    h4 {
+      font-size: 19px;
+    }
   }
   ul,
   ol {
     margin-bottom: 40px;
-    @media (max-width: $MQMobile){
+    @media (max-width: $MQMobile) {
       & {
         padding-left: 30px;
       }
@@ -252,7 +260,7 @@ samp {
   }
   .anchorjs-link {
     // I can not understand this but this made anchor always in the same line as title
-    position: absolute; 
+    position: absolute;
     padding-top: 1px;
   }
 
@@ -261,18 +269,17 @@ samp {
     font-size: inherit;
     position: inherit;
     &:before {
-      content: '[';
+      content: "[";
       margin-right: 1px;
       color: var(--primary-color);
     }
     &:after {
-      content: ']';
+      content: "]";
       margin-left: 1px;
       color: var(--primary-color);
     }
   }
 }
-
 
 // Sections
 
@@ -309,7 +316,7 @@ footer {
     a {
       color: currentColor;
       // different to @brand-primary
-      @include transition(.2s ease);
+      @include transition(0.2s ease);
       &:hover,
       &:focus {
         color: var(--primary-color);
@@ -379,7 +386,6 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid $gray-light;
 }
 
-
 // Pager Styling
 
 .pager {
@@ -398,7 +404,7 @@ form .row:first-child .floating-label-form-group {
       background-color: transparent;
       border-radius: 3px;
       border-color: var(--border-color-dark);
-      @media (max-width: $MQMobile){
+      @media (max-width: $MQMobile) {
         font-size: 14px;
         padding: 15px 25px;
       }
@@ -459,7 +465,6 @@ img::-moz-selection {
   background: transparent;
 }
 
-
 /* Hux make all img responsible in post-container */
 .post-container img {
   display: block;
@@ -475,7 +480,7 @@ img::-moz-selection {
 }
 
 // MathJax Overflow
-.MathJax_SVG_Display{
+.MathJax_SVG_Display {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }

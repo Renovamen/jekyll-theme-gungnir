@@ -2,33 +2,33 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import 
-    "common/variables",
-    "common/mixins",
+@import
+  "common/variables",
+  "common/mixins",
 
-    "components/sidebar",
-    "components/side-catalog",
-    "components/snackbar",
-    "components/search",
-    "components/navbar",
-    "components/postlist",
-    "components/intro-header",
-    "components/menu",
-    "components/comment/duoshuo",
-    "components/comment/gitalk",
-    "components/author",
+  "components/sidebar",
+  "components/side-catalog",
+  "components/snackbar",
+  "components/search",
+  "components/navbar",
+  "components/postlist",
+  "components/intro-header",
+  "components/menu",
+  "components/comment/duoshuo",
+  "components/comment/gitalk",
+  "components/author",
 
-    "layouts/archive",
-    "layouts/links",
-    "layouts/about/index",
-    "layouts/portfolio",
-    "layouts/404",
+  "layouts/archive",
+  "layouts/links",
+  "layouts/about/index",
+  "layouts/portfolio",
+  "layouts/404",
 
-    "highlight/{{ site.theme_style.highlight | default: 'dark' }}",
+  "highlight/{{ site.theme_style.highlight | default: 'dark' }}",
 
-    "enhancements/alert/{{ site.theme_style.alert | default: 'flat' }}",
-    "enhancements/tag",
-    "enhancements/desc",
-    
-    "style"
+  "enhancements/alert/{{ site.theme_style.alert | default: 'flat' }}",
+  "enhancements/tag",
+  "enhancements/desc",
+
+  "style"
 ;

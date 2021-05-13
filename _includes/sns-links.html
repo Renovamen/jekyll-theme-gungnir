@@ -1,5 +1,5 @@
 {% comment %}
-    @param {Boolean} center 
+  @param {Boolean} center
 {% endcomment %}
 
 {% if include.center %}
@@ -15,6 +15,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.linkedin_username %}
   <a target="_blank" href="https://www.linkedin.com/in/{{ site.sns.linkedin_username }}">
     <span class="fa-stack fa-lg">
@@ -23,6 +24,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.facebook_username %}
   <a target="_blank" href="https://www.facebook.com/{{ site.sns.facebook_username }}">
     <span class="fa-stack fa-lg">
@@ -31,6 +33,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.twitter_username %}
   <a target="_blank" href="https://twitter.com/{{ site.sns.twitter_username }}">
     <span class="fa-stack fa-lg">
@@ -39,6 +42,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.zhihu_username %}
   <a target="_blank" href="https://www.zhihu.com/people/{{ site.sns.zhihu_username }}">
     <span class="fa-stack fa-lg">
@@ -47,6 +51,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.weibo_username %}
   <a target="_blank" href="http://weibo.com/{{ site.sns.weibo_username }}">
     <span class="fa-stack fa-lg">
@@ -55,6 +60,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.email_address %}
   <a href="mailto:{{ site.sns.email_address }}">
     <span class="fa-stack fa-lg">
@@ -63,6 +69,7 @@
     </span>
   </a>
   {% endif %}
+
   {% if site.sns.RSS %}
   <a target="_blank" href="{{ "/feed.xml" | prepend: site.baseurl }}">
     <span class="fa-stack fa-lg">

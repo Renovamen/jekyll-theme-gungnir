@@ -1,44 +1,57 @@
 <!------------ 今日诗词: https://www.jinrishici.com/ ------------>
 <section class="author-profile">
-    <div class="info"> 
-        <div class="avatar">
-            <img src="{{site.baseurl}}/{{site.avatar}}">
-        </div>
-        <h1>{{site.title}}</h1>
+  <div class="info">
+    <div class="avatar">
+      <img src="{{site.baseurl}}/{{site.avatar}}" />
     </div>
-    <span>
-        <a href="https://www.jinrishici.com/" target="_blank">
-            <i class="fas fa-pencil-alt"></i>
-        </a>
-        <p id="poem-item">作诗中...</p>
-        <br><p id="poem-info"></p>
-    </span>
+    <h1>{{site.title}}</h1>
+  </div>
+  <span>
+    <a href="https://www.jinrishici.com/" target="_blank">
+      <i class="fas fa-pencil-alt"></i>
+    </a>
+    <p id="poem-item">作诗中...</p>
+    <br />
+    <p id="poem-info"></p>
+  </span>
 </section>
 
 <script type="text/javascript">
-    // async load function
-    function async(u, c) {
-        var d = document, t = 'script',
-            o = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) {
-            o.addEventListener('load', function (e) {
-                c(null, e);
-            }, false);
-        }
-        s.parentNode.insertBefore(o, s);
+  // async load function
+  function async(u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener(
+        "load",
+        function (e) {
+          c(null, e);
+        },
+        false
+      );
     }
-    async('https://sdk.jinrishici.com/v2/browser/jinrishici.js', function(){
-        jinrishici.load(function(result) {
-            var poem = document.querySelector('#poem-item');
-            var info = document.querySelector('#poem-info');
+    s.parentNode.insertBefore(o, s);
+  }
+  async("https://sdk.jinrishici.com/v2/browser/jinrishici.js", function () {
+    jinrishici.load(function (result) {
+      var poem = document.querySelector("#poem-item");
+      var info = document.querySelector("#poem-info");
 
-            if (result.status === "success") {
-                var data = result.data
-                poem.innerHTML = data.content;
-                info.innerHTML = '【' + data.origin.dynasty + '】' + data.origin.author + '《' + data.origin.title + '》';
-            }
-        });
-    })
+      if (result.status === "success") {
+        var data = result.data;
+        poem.innerHTML = data.content;
+        info.innerHTML =
+          "【" +
+          data.origin.dynasty +
+          "】" +
+          data.origin.author +
+          "《" +
+          data.origin.title +
+          "》";
+      }
+    });
+  });
 </script>
